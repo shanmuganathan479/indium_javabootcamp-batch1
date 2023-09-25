@@ -1,0 +1,5 @@
+vignesh,200000,111,savings
+meiyarasu,500000,112,savings
+shanmuganathan,300000,113,current
+mirshat,50000,114,savings
+balaji,70000,115,current

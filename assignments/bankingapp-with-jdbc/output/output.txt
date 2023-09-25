@@ -1,0 +1,4 @@
+mei,600000,113,savings
+shanmugam,500000,111,current
+balaji,200000,112,current
+vignesh,200000,123,savings
