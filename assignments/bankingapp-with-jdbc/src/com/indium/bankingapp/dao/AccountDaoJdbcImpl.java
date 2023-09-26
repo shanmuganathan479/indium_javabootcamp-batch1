@@ -23,9 +23,9 @@ public class AccountDaoJdbcImpl implements AccuntDao{
             if(conn == null) {
                 MysqlDataSource datasource = new MysqlDataSource();
                 datasource.setServerName("localhost");
-                datasource.setDatabaseName("bankinapp");
+                datasource.setDatabaseName("bankapp");
                 datasource.setUser("root");
-                datasource.setPassword("1234");
+                datasource.setPassword("shan@3348");
 
 
                 conn = datasource.getConnection();
