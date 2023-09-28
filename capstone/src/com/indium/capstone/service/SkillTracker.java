@@ -5,7 +5,7 @@ import com.indium.capstone.model.Skill;
 
 public interface SkillTracker {
     public void listAssociates();
-    public void editAssociate(int associateId, Associate updatedAssociate);
+    public void editAssociate(Associate updatedAssociate);
     public void deleteAssociate(int associateId);
     public void addSkillToAssociate(int associateId, Skill skill);
     public void editSkill(int skillId, Skill updatedSkill);

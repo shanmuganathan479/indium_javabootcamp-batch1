@@ -22,6 +22,8 @@ public class Main {
             System.out.println("8. View Associate Details");
             System.out.println("9. Search associates");
             System.out.println("10.show key metrics");
+            System.out.println("11. Import data");
+            System.out.println("12. Export data");
             System.out.println("0. Exit");
 
             System.out.print("Enter your choice: ");
@@ -60,8 +62,8 @@ public class Main {
                     email = scanner.next();
                     System.out.print("Enter Location: ");
                     location = scanner.next();
-                    Associate updatedAssociate = new Associate(name, age, businessUnit, email, location);
-                    app.editAssociate(editAssociateId, updatedAssociate);
+                    Associate updatedAssociate = new Associate(editAssociateId,name, age, businessUnit, email, location);
+                    app.editAssociate(updatedAssociate);
                     System.out.println("Associate edited successfully!");
                     break;
                 case 4:
@@ -81,7 +83,7 @@ public class Main {
                     String skillCategory = scanner.next();
                     System.out.print("Enter Skill Experience (months): ");
                     int skillExperience = scanner.nextInt();
-                    Skill newSkill = new Skill(skillId,skillName, skillDescription, skillCategory, skillExperience);
+                    Skill newSkill = new Skill(addSkillAssociateId,skillName, skillDescription, skillCategory, skillExperience);
                     app.addSkillToAssociate(addSkillAssociateId, newSkill);
                     System.out.println("Skill added to associate successfully!");
                     skillId++;
@@ -97,7 +99,7 @@ public class Main {
                     skillCategory = scanner.next();
                     System.out.print("Enter Skill Experience (months): ");
                     skillExperience = scanner.nextInt();
-                    Skill updatedSkill = new Skill(skillId,skillName, skillDescription, skillCategory, skillExperience);
+                    Skill updatedSkill = new Skill(skillName, skillDescription, skillCategory, skillExperience,editSkillId,skillDescription);
                     app.editSkill(editSkillId, updatedSkill);
                     skillId++;
                     System.out.println("Skill edited successfully!");
@@ -187,6 +189,12 @@ public class Main {
                     break;
 
                 }
+                case 11:
+                    app.importData();
+                    break;
+                case 12:
+                    app.exportData();
+                    break;
                 case 0:
                     System.out.println("Exiting Skill Tracker App.");
                     System.exit(0);
